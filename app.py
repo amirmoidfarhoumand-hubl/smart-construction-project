@@ -172,7 +172,7 @@ with tab3:
                 with st.spinner("دستیار در حال تحلیل داده‌های پروژه..."):
                    client = Groq(api_key=st.secrets["GROQ_API_KEY"], timeout=90.0)
                     
-                    chat_completion = client.chat.completions.create(
+                   chat_completion = client.chat.completions.create(
                         messages=[
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_query}
