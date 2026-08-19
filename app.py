@@ -177,7 +177,7 @@ with tab3:
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_query}
                         ],
-                        model="llama3-8b-instant", 
+                        model="llama3-8b-8192", 
                         temperature=0.3,
                         max_tokens=800,
                     )
