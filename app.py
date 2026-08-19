@@ -140,7 +140,6 @@ with tab3:
     st.header("🤖 دستیار هوشمند مدیر پروژه")
     st.info("این بخش مستقیماً از طریق کلید اختصاصی به مدل‌های فوق‌سریع Groq متصل است.")
     
-    YOUR_GROQ_API_KEY = "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"
     
     # ساختن Context سیستم بر اساس خروجی مدل‌ها
     system_prompt = (
@@ -171,7 +170,7 @@ with tab3:
         else:
             try:
                 with st.spinner("دستیار در حال تحلیل داده‌های پروژه..."):
-                    client = Groq(api_key=YOUR_GROQ_API_KEY, timeout=90.0)
+                   client = Groq(api_key=st.secrets["GROQ_API_KEY"], timeout=90.0)
                     
                     chat_completion = client.chat.completions.create(
                         messages=[
