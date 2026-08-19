@@ -182,9 +182,9 @@ with tab3:
                         max_tokens=800,
                     )
                     
-                    response_text = chat_completion.choices[0].message.content
-                    st.chat_message("user").write(user_query)
-                    st.chat_message("assistant").write(response_text)
+                   response_text = chat_completion.choices[0].message.content
+                   st.chat_message("user").write(user_query)
+                   st.chat_message("assistant").write(response_text)
                     
             except Exception as e:
                 st.error(f"ارور ارتباط با سرور: {e}")
