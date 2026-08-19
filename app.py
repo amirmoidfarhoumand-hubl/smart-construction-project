@@ -177,7 +177,7 @@ with tab3:
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_query}
                         ],
-                        model="llama-3.3-70b-versatile", 
+                        model="openai/gpt-oss-20b", 
                         temperature=0.3,
                         max_tokens=800,
                     )
